@@ -1,0 +1,16 @@
+name: CI
+on: push
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7          # pull your code onto the runner
+      - uses: dtolnay/rust-toolchain@stable # but it reads rust-toolchain.toml → 1.96.0
+        with:
+          components: rustfmt, clippy       # ensure both are present
+      - uses: Swatinem/rust-cache@v2        # cache deps + target/
+      - run: cargo fmt --all --check
+      - run: cargo clippy --all-targets -- -D warnings
+      - run: cargo build --workspace        # or: cargo test --workspace
+      - run: cargo test --workspace
