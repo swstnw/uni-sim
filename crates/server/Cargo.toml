@@ -1,0 +1,11 @@
+[package]
+name = "server"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+registry = { path = "../registry" }
+gateway = { path = "../gateway" }
+engine = { path = "../engine" }

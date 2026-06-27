@@ -1,0 +1,8 @@
+[package]
+name = "registry"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]

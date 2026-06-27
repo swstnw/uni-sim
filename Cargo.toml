@@ -1,0 +1,21 @@
+[workspace]
+resolver = "3"
+members  = [
+    "crates/contract",
+    "crates/registry",
+    "crates/engine",
+    "crates/gateway",
+    "crates/server",
+]
+
+[workspace.package]
+# shared metadata every crate inherits via `field.workspace = true`
+edition    = "2024"
+version    = "0.1.0"
+license    = "MIT"
+repository = "https://github.com/swstnw/uni-sim"
+# authors, rust-version (MSRV) optional — your call
+
+[workspace.dependencies]
+# shared dependency *versions*, empty for now.
+# tonic/tokio/prost land here in Slice 2/3 — declared once, used by name in member crates.
