@@ -1,0 +1,21 @@
+syntax = "proto3";
+package uni.v0;
+
+message Vector {
+  repeated double values = 1;
+}
+
+message ValueList {
+  repeated Value values = 1;
+}
+
+message Value {
+  oneof v {
+    double    scalar     = 1;
+    int64     int        = 2;
+    bool      boolean    = 3;
+    Vector    vector     = 4;
+    uint32    enum_value = 5;
+    ValueList list       = 6;
+  }
+}
