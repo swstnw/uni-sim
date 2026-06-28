@@ -8,6 +8,7 @@ repository.workspace = true
 [dependencies]          # linked INTO the crate, used at runtime
 tonic.workspace = true  #   the service traits + transport types the generated code references
 prost.workspace = true  #   the runtime that encodes/decodes messages
+tonic-prost.workspace = true
 
 [build-dependencies]    # used only WHILE building, by build.rs — never shipped
-tonic-build.workspace = true   # the codegen tool that runs protoc and writes the .rs
+tonic-prost-build  =  { workspace = true, default-features = true }   # the codegen tool that runs protoc and writes the .rs
