@@ -12,3 +12,7 @@ tonic-prost.workspace = true
 
 [build-dependencies]    # used only WHILE building, by build.rs — never shipped
 tonic-prost-build  =  { workspace = true, default-features = true }   # the codegen tool that runs protoc and writes the .rs
+
+
+[dev-dependencies]
+cargo-husky = { version = "1.5.0", default-features = false, features = ["precommit-hook", "run-cargo-fmt"] }
