@@ -21,3 +21,6 @@ tonic       = "*"
 prost       = "0.14.4"
 tonic-prost = "*"  
 tonic-prost-build = "0.14.6"
+
+[dev-dependencies]
+cargo-husky = { version = "1", features = ["precommit-fmt"] }
