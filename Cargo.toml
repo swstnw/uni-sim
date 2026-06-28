@@ -14,8 +14,9 @@ edition    = "2024"
 version    = "0.1.0"
 license    = "MIT"
 repository = "https://github.com/swstnw/uni-sim"
-# authors, rust-version (MSRV) optional — your call
+author ="SwsTnw"  
 
 [workspace.dependencies]
-# shared dependency *versions*, empty for now.
-# tonic/tokio/prost land here in Slice 2/3 — declared once, used by name in member crates.
+tonic       = "0.14.6"
+prost       = "0.14.6"
+tonic-build = "0.14.6"  
